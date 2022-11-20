@@ -44,7 +44,7 @@
     </div>
   </div>
   {% else %}
-    <h1>Finalizar Checkout</h1>
+    <h1>Finalizar Pedido</h1>
     <p>Items do Carrinho: {% for product in object.cart.products.all %}{{ product }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
     <p>Endereço de Envio: {{ object.shipping_address.get_address }}</p>
     <p>Endereço de Cobrança: {{ object.billing_address.get_address }}</p>
@@ -52,7 +52,7 @@
     <p>Total do Frete: {{ object.shipping_total }}</p>
     <p>Total do Pedido: {{ object.total }}</p>
     <form class='form' method='POST' action="">{% csrf_token %}
-      <button type='submit'>Checkout</button>
+      <button type='button' class="btn btn-warning">Finalizar</button>
     </form>
   {% endif %}
   {% endif %}
