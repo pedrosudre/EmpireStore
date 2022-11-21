@@ -10,8 +10,8 @@ body {
 }
 
 .container {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
+  border: 2px solid #b6b6b6;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
@@ -96,9 +96,9 @@ body {
 
     <form id="post-form" method="POST" action="checkview">
         {% csrf_token %}
-        <label>Room Name</label>
+        <label>Nome da sala</label>
         <input type="text" name="room_name" id="room_name" width="100px" />
-        <label>Username</label>
+        <label>Nome de usuário</label>
         <input type="text" name="username" id="username" width="100px" />
         <input type="submit" value="Enter Room">
     </form>
