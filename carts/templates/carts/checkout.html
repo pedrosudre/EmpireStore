@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
   {% if not billing_profile %}
+  <div class="container text-white">
+
+
     <div class='row text-center'>
       <div class='col-12 col-md-6'>
         <p class='lead'>Login</p>
@@ -56,4 +59,5 @@
     </form>
   {% endif %}
   {% endif %}
+</div>
 {% endblock %}

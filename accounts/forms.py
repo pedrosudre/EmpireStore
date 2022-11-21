@@ -7,14 +7,14 @@ class GuestForm(forms.Form):
     email = forms.EmailField()
     
 class LoginForm(forms.Form):
-    username = forms.CharField(label="Nome de usuário")
-    password = forms.CharField(label="Senha", widget=forms.PasswordInput)
+    username = forms.CharField(label="", widget=forms.TextInput(attrs={'placeholder': 'Usuário'}))
+    password = forms.CharField(label=".", widget=forms.PasswordInput(attrs={'placeholder': 'Senha'}))
 
 class RegisterForm(forms.Form):
-    username = forms.CharField(label="Nome de usuário")
-    email = forms.EmailField(label="E-mail")
-    password = forms.CharField(label="Senha", widget=forms.PasswordInput)
-    password2 = forms.CharField(label="Confirme sua senha", widget=forms.PasswordInput)
+    username = forms.CharField(label="", widget=forms.TextInput(attrs={'placeholder': 'Usuário'}))
+    email = forms.EmailField(label=".", widget=forms.TextInput(attrs={'placeholder': 'E-mail'}))
+    password = forms.CharField(label=".", widget=forms.PasswordInput(attrs={'placeholder': 'Senha'}))
+    password2 = forms.CharField(label=".", widget=forms.PasswordInput(attrs={'placeholder': 'Confirme sua senha'}))
 
     def clean_username(self):
         username = self.cleaned_data.get('username')

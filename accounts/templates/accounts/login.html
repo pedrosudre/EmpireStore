@@ -1,8 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<form method='POST'> 
-    {% csrf_token %}
-    {{ form }}
-    <button type='submit' class='btn btn-default'>Enviar</button>
-</form>
+<div class="row" style="margin-top: 10%">
+    <div class="container d-flex justify-content-center text-light" >
+        <div class="col">
+            <form class="p-4 border border border-white rounded col-md-10 col-lg-5 mx-auto d-flex flex-column mt-4 w-70 " method='POST'>
+                <h2 class="d-flex justify-content-center mb-4 text-white">Login</h2>
+                {% csrf_token %}
+                {{ form }}
+                <button type='submit' class='btn btn-warning mt-4 w-100'>Entrar</button>
+            </form>
+            <div class="text-white text-center pt-4">
+                Novo na Empire Store? <a href="{% url 'register' %}" class="text-warning">CADASTRE-SE</a> 
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
+

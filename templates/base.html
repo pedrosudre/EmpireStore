@@ -13,9 +13,11 @@
         {% block base_head %}{% endblock base_head %}
     </head>
 
-    <body>
+    <body class="bg-dark">
         {% include 'base/navbar.html' with nome_da_marca='Empire Store' %}
-        <div class='container'>
+        <hr style="border-color: rgb(248, 190, 0)">
+        <br>
+        <div class='container bg-dark'>
             {% block content %} {% endblock %}
         </div>
         {% include 'base/js.html' %}
