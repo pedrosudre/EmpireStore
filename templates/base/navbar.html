@@ -6,6 +6,7 @@
 {% url 'register' as register_url %}
 {% url 'cart:home' as cart_url %}
 
+{% block content %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3 mt-2">
   <div class='container'>
     <a class="navbar-brand" href="{{ home_url }}">
@@ -23,21 +24,8 @@
         <li class="nav-item {% if request.path == home_url %} active {% endif %}">
           <a class="nav-link" href="{{ home_url }}">Home <span class="sr-only">(current)</span></a>
         </li>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Produtos
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{{ products_list_url }}">Todos os produtos</a>
-          <hr>
-          <a class="dropdown-item" href="#">Mouse</a>
-          <a class="dropdown-item" href="#">Teclado</a>
-          <a class="dropdown-item" href="#">Controle</a>
-          <a class="dropdown-item" href="#">Headset</a>
-          <a class="dropdown-item" href="#">Monitor</a>
-          <a class="dropdown-item" href="#">Caixa de som</a>
-          </div>
+        <li class="nav-item {% if request.path == products_list_url %} active {% endif %}">
+          <a class="nav-link" href="{{ products_list_url }}">Produtos</a>
         </li>
         <li class="nav-item {% if request.path == contact_url %} active {% endif %}">
           <a class="nav-link" href="{{ contact_url }}">Suporte</a>
@@ -66,3 +54,4 @@
     </div>
   </div><!--fim container-->
 </nav>
+{% endblock %}
