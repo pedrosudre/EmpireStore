@@ -31,7 +31,6 @@ class BillingProfile(models.Model):
     email = models.EmailField()
     active = models.BooleanField(default = True)
     update = models.DateTimeField(auto_now = True)
-    timestamp = models.DateTimeField(auto_now_add = True)
     # customer_id no Stripe ou Braintree ou ...
     objects = BillingProfileManager()
     def __str__(self):

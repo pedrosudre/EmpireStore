@@ -5,6 +5,7 @@ from addresses.models import Address
 from billing.models import BillingProfile
 from carts.models import Cart
 from empirestore.utils import unique_order_id_generator
+from django.conf import settings
 
 ORDER_STATUS_CHOICES = (
     ('created', 'Criado'),
@@ -100,3 +101,10 @@ def post_save_order(sender, instance, created, *args, **kwargs):
         instance.update_total()
 
 post_save.connect(post_save_order, sender=Order) 
+
+
+User = settings.AUTH_USER_MODEL
+
+class acompanharPedido(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null = True, blank = True)
+    status = models.BooleanField(default="Não Entregue")
