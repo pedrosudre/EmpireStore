@@ -9,14 +9,18 @@ from django.core.files.storage import FileSystemStorage
 from django.template.loader import render_to_string
 from django.http import HttpResponse
 from weasyprint import HTML
-
+from django.utils.translation import gettext as _
+from django.utils import translation
 
 
 def home_page(request):
     context = {
-                    "title": "Home Page",
-                    "content": "Bem vindo a Home Page",
+                    "title": _("Página de início"),
+                    "content": _("Bem vindo a Pagina Inicial"),
               }
+    lang = translation.get_language()
+    context['lang'] = lang
+    translation.activate(lang)
     if request.user.is_authenticated:
         context["premium_content"] = "Você é um usuário Premium"
     return render(request, "home_page.html", context)
