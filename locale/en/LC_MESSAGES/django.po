@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-24 15:02-0300\n"
+"POT-Creation-Date: 2022-11-25 10:15-0300\n"
 "PO-Revision-Date: 2022-11-24 15:03-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,15 +20,15 @@ msgstr ""
 
 #: accounts/forms.py:11 accounts/forms.py:15
 msgid "Usuário"
-msgstr ""
+msgstr "Username"
 
 #: accounts/forms.py:12 accounts/forms.py:17
 msgid "Senha"
-msgstr ""
+msgstr "Password"
 
 #: accounts/forms.py:18
 msgid "Confirme sua senha"
-msgstr ""
+msgstr "Confirm your password"
 
 #: accounts/forms.py:24
 msgid "Esse usuário já existe, escolha outro nome."
@@ -264,7 +264,7 @@ msgid "Atualizando"
 msgstr ""
 
 #: products/templates/products/detail.html:15
-#: products/templates/products/snippets/card.html:11
+#: products/templates/products/snippets/card.html:12
 msgid "R$"
 msgstr "$"
 
@@ -276,15 +276,7 @@ msgstr "PRODUCT DESCRIPTION"
 msgid "INFORMAÇÕES TÉCNICAS"
 msgstr "TECHNICAL INFORMATION"
 
-#: products/templates/products/list.html:25
-msgid "Página"
-msgstr "Page"
-
-#: products/templates/products/list.html:25
-msgid "de"
-msgstr "of"
-
-#: products/templates/products/snippets/card.html:12
+#: products/templates/products/snippets/card.html:13
 msgid "Detalhes"
 msgstr "Details"
 
@@ -296,7 +288,7 @@ msgstr "Remove from cart"
 msgid "Adicionar ao carrinho"
 msgstr "Add to cart"
 
-#: products/views.py:82 products/views.py:90
+#: products/views.py:80 products/views.py:88
 msgid "Esse produto não existe!"
 msgstr "This product does not exist!"
 
@@ -1701,8 +1693,8 @@ msgid ""
 "If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
 "including the “Referrer-Policy: no-referrer” header, please remove them. The "
 "CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/csrf.py:136
@@ -1811,9 +1803,9 @@ msgstr ""
 #, python-format
 msgid ""
 "You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:230
@@ -1839,6 +1831,12 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Página"
+#~ msgstr "Page"
+
+#~ msgid "de"
+#~ msgstr "of"
 
 #, fuzzy
 #~| msgid "Iniciar atendimento"
