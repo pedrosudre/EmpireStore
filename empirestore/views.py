@@ -44,23 +44,6 @@ def contact_page(request):
     return render(request, "contact/view.html", context)
 
 
-def productGraphic(BaseLineChartView):
-    def get_labels(self):
-        labels = []
-        queryset = Product.objects.order_by('id')
-        for curso in queryset:
-            labels.append(curso.nome)
-        return labels
-
-    def get_data(self):
-        resultado = []
-        dados = []
-        queryset = Product.objects.order_by('id').annotate(total=Count('type'))
-        for linha in queryset:
-            dados.append(int(linha.total))
-        resultado.append(dados)
-        return resultado
-
 class RelatorioProdutosView(WeasyTemplateView):
 
     def get(self, request, *args, **kwargs):
