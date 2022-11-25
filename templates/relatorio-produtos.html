@@ -8,23 +8,23 @@
     <center>
         <img src="{% static 'images/logo/logo.svg' %}">
         <br/>
-        <h1>Relatório de Alunos</h1>
+        <h1>Relatório de Produtos</h1>
     </center>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Nome do Aluno</th>
-                    <th scope="col">E-mail</th>
-                    <th scope="col">Curso</th>
+                    <th scope="col">Título do Produto</th>
+                    <th>Tipo</th>
+                    <th scope="col">Preço</th>
                 </tr>
             </thead>
 
             <tbody>
-                {% for a in alunos %}
+                {% for a in produtos %}
                     <tr>
-                        <th scope="row">{{ a.nome }}</th>
-                        <th scope="row">{{ a.email }}</th>
-                        <th scope="row">{{ a.curso }}</th>
+                        <th scope="row">{{ a.title }}</th>
+                        <th scope="row">{{ a.productType }}</th>
+                        <th scope="row">{{ a.price }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

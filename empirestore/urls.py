@@ -30,7 +30,7 @@ urlpatterns = [
     path('products/', include("products.urls", namespace="products")),
     path('', include('requests.urls')),
     path('graphic/', productGraphic, name='graphic'),
-    path('relatorio-alunos/', RelatorioProdutosView.as_view(), name='relatorio-alunos'),
+    path('relatorio-produtos/', RelatorioProdutosView.as_view(), name='relatorio-produtos'),
     path('restrito/', admin.site.urls),
     path('', include('chat.urls')),
  

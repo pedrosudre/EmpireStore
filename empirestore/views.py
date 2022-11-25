@@ -64,15 +64,16 @@ def productGraphic(BaseLineChartView):
 class RelatorioProdutosView(WeasyTemplateView):
 
     def get(self, request, *args, **kwargs):
-        alunos = Product.objects.order_by('title').all()
+        produtos = Product.objects.all()
 
-        html_string = render_to_string('relatorio-alunos.html', {'alunos': alunos})
+        html_string = render_to_string('relatorio-produtos.html', {'produtos': produtos})
 
-        html = HTML(string=html_string, base_url=request.build_absolute_uri())
-        html.write_pdf(target='/tmp/relatorio-alunos.pdf')
+        html = HTML(string=html_string, base_url=request.build_absolute_uri()
+        )
+        html.write_pdf(target='/tmp/relatorio-produtos.pdf')
         fs = FileSystemStorage('/tmp')
 
-        with fs.open('relatorio-alunos.pdf') as pdf:
+        with fs.open('relatorio-produtos.pdf') as pdf:
             response = HttpResponse(pdf, content_type='application/pdf')
-            response['Content-Disposition'] = 'inline; filename="relatorio-alunos.pdf"'
+            response['Content-Disposition'] = 'inline; filename="relatorio-produtos.pdf"'
         return response
