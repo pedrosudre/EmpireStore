@@ -1,18 +1,52 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
-    
-    <div class='row'>
+
+    <div class='row '>
         {% for obj in object_list %}
-            <div class='col'>
+            <div class='col d-flex justify-content-center'>
             {% include 'products/snippets/card.html' with instance=obj %}
             {% if forloop.counter|divisibleby:3 %}
                 </div><!--close the row--></div><!--close the col--><div class='row'><div class='col-12'><hr/></div>
-            {% elif forloop.counter|divisibleby:2 %}
+            {% elif forloop.counter|divisibleby:3 %}
                 </div>
             {% else %}
                 </div>
             {% endif%}
+            <br><br>
+
         {% endfor%}
+
     </div>
-   
+
+
+    <div class="mt-4 col d-flex justify-content-center text-warning">
+        <div class="mr-2">
+            {% if page_obj.has_previous %}
+                {% if request.GET.nome %}
+                <a class="mr-2" href="?page=1&nome={{request.GET.nome}}"style="color: rgb(248, 190, 0);">&lt;&lt;</a>
+                <a href="?page={{ page_obj.previous_page_number }}&nome={{request.GET.nome}}"style="color: rgb(248, 190, 0);">&lt;</a>
+            {% else %}
+                <a class="mr-2" href="?page=1">&lt;&lt;</a>
+                <a href="?page={{ page_obj.previous_page_number }}"style="color: rgb(248, 190, 0);">&lt;</a>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <span class="text-white">Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+
+        <div class="ml-2">                
+            {% if page_obj.has_next %}
+                {% if request.GET.nome %}
+                <a class="ml-2"  href="?page={{ page_obj.next_page_number }}&nome={{request.GET.nome}}" style="color: rgb(248, 190, 0);">&gt;</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}&nome={{request.GET.nome}}" style="color: rgb(248, 190, 0);">&gt;&gt;</a>
+            {% else %}
+                <a href="?page={{ page_obj.next_page_number }}" style="color: rgb(248, 190, 0);">&gt;</a>
+                <a class="ml-2" href="?page={{ page_obj.paginator.num_pages }}" style="color: rgb(248, 190, 0);">&gt;&gt;</a>
+                {% endif %}
+            {% endif %} 
+        </div>
+    </div>
+
 {% endblock content %}
+

@@ -2,6 +2,8 @@
 from django.shortcuts import render, redirect
 from chat.models import Room, Message
 from django.http import HttpResponse, JsonResponse
+from django.utils.translation import gettext_lazy as _
+
 
 # Create your views here.
 def home(request):
@@ -34,7 +36,7 @@ def send(request):
 
     new_message = Message.objects.create(value=message, user=username, room=room_id)
     new_message.save()
-    return HttpResponse('Message sent successfully')
+    return HttpResponse( _('Mensagem enviada com sucesso'))
 
 def getMessages(request, room):
     room_details = Room.objects.get(name=room)

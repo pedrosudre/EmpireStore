@@ -6,6 +6,8 @@ from billing.models import BillingProfile
 from carts.models import Cart
 from empirestore.utils import unique_order_id_generator
 from django.conf import settings
+from django.utils.translation import gettext_lazy as _
+
 
 ORDER_STATUS_CHOICES = (
     ('created', 'Criado'),
@@ -95,9 +97,9 @@ def post_save_cart_total(sender, instance, created, *args, **kwargs):
 post_save.connect(post_save_cart_total, sender=Cart)
 
 def post_save_order(sender, instance, created, *args, **kwargs):
-    print("Executando")
+    print(_("Executando"))
     if created:
-        print("Atualizando")
+        print(_("Atualizando"))
         instance.update_total()
 
 post_save.connect(post_save_order, sender=Order) 

@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <form method='POST' action='{% if action_url %}{{ action_url }}{% else %}{% url "login" %}{% endif %}'> {% csrf_token %}
   {% if next_url %}
   <input type='hidden' name='next' value='{{ next_url }}' />
@@ -13,5 +15,5 @@
     width: 300px;
   }
 </style>
-<button type='submit' id="enviar" class='btn btn-success mt-3 '>Enviar</button>
+<button type='submit' id="enviar" class='btn btn-success mt-3 '>{% trans 'Enviar' %}</button>
 </form>

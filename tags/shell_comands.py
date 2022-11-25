@@ -1,4 +1,4 @@
-python manage.py shell
+#python manage.py shell
 
 from tags.models import Tag
 Tag.objects.all()
@@ -11,15 +11,14 @@ azul.products.all()
 from products.models import Product
 qs = Product.objects.all()
 qs
-camisa = qs.first()
-camisa.title
-camisa.description
-camisa.tag
-camisa.tags
+mouse = qs.first()
+mouse.title
+mouse.description
+mouse.tag
+mouse.tags
 
-mas podemos usar tag_set
-que é um gerenciador many to many
-camisa.tag_set.all()
+#mas podemos usar tag_set
+#que é um gerenciador many to many
+mouse.tag_set.all()
 
-camisa.tag_set.filter(title__iexact='branca')
-camisa.tag_set.filter(title__iexact='branco')
+mouse.tag_set.filter(title__iexact='rgb')

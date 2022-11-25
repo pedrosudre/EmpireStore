@@ -22,17 +22,23 @@ def home_page(request):
     context['lang'] = lang
     translation.activate(lang)
     if request.user.is_authenticated:
-        context["premium_content"] = "Você é um usuário Premium"
+        context["premium_content"] = _("Você é um usuário Premium")
+        lang = translation.get_language()
+        context['lang'] = lang
+        translation.activate(lang)
     return render(request, "home_page.html", context)
     
 
 def contact_page(request):
     contact_form = ContactForm(request.POST or None)
     context = {
-                    "title": "Como podemos te ajudar?",
-                    "content": "Ou envie-nos um e-mail",
+                    "title": _("Como podemos te ajudar?"),
+                    "content": _("Ou envie-nos um e-mail"),
                     "form": contact_form	
               }
+    lang = translation.get_language()
+    context['lang'] = lang
+    translation.activate(lang)
     if contact_form.is_valid():
         print(contact_form.cleaned_data)
     return render(request, "contact/view.html", context)

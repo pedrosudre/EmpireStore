@@ -11,6 +11,9 @@ from billing.models import BillingProfile
 from orders.models import Order
 from products.models import Product
 from .models import Cart
+from django.utils.translation import gettext_lazy as _
+
+
 
 def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
@@ -28,7 +31,7 @@ def cart_detail_api_view(request):
     #     products_list.append({
     #         {"name": x.title, "price": x.price}
     #     })
-    cart_data = {"products": products, "subtotal": cart_obj.subtotal, "total": cart_obj.total}
+    cart_data = {_("products"): products, _("subtotal"): cart_obj.subtotal, _("total"): cart_obj.total}
     return JsonResponse(cart_data)
 
 def cart_home(request):
@@ -41,7 +44,7 @@ def cart_update(request):
         try:
             product_obj = Product.objects.get(id=product_id)
         except Product.DoesNotExist:
-            print("Mostrar mensagem ao usuário, esse produto acabou!")
+            print(_("Esse produto acabou!"))
             return redirect("cart:home")
         cart_obj, new_obj = Cart.objects.new_or_get(request)
         if product_obj in cart_obj.products.all():

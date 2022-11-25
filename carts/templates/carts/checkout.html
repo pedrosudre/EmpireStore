@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 
 
@@ -21,7 +22,7 @@
         {% include 'accounts/snippets/form.html' with form=login_form next_url=request.build_absolute_uri %}
       </div>
       <div class='col-12 col-md-6'> 
-        Continuar como convidado
+        {% trans 'Continuar como convidado' %}
         {% url "guest_register" as guest_register_url %}
         {% include 'accounts/snippets/form.html' with form=guest_form next_url=request.build_absolute_uri action_url=guest_register_url %}
       </div>
@@ -31,7 +32,7 @@
 <div class="container text-white col-8 d-flex flex-column">
     <div class='row'> 
         <div class='col-12 '>
-          <p class='lead'>Endereço de envio</p>
+          <p class='lead'>{% trans 'Endereço de envio' %}</p>
           <hr/>
         </div>
         <div class='col-6 '>
@@ -47,7 +48,7 @@
     <div class="container text-white col-8 d-flex flex-column">
       <div class='row'>
         <div class='col-12'>
-          <p class='lead'>Endereço de Cobrança</p>
+          <p class='lead'>{% trans 'Endereço de Cobrança' %}</p>
           <hr/>
         </div>
         <div class='col-6'> 
@@ -63,15 +64,15 @@
   </div>
   {% else %}
   <div class="container text-white">
-    <h1>Finalizar Pedido</h1>
-    <p>Itens do Carrinho: {% for product in object.cart.products.all %}{{ product }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
-    <p>Endereço de Envio: {{ object.shipping_address.get_address }}</p>
-    <p>Endereço de Cobrança: {{ object.billing_address.get_address }}</p>
-    <p>Total do Carrinho: R$ {{ object.cart.total }}</p>
-    <p>Total do Frete: R$ {{ object.shipping_total }}</p>
-    <p class="text-warning">Total do Pedido: R$ {{ object.total }}</p>
+    <h1>{% trans 'Finalizar Pedido' %}</h1>
+    <p>{% trans 'Itens do Carrinho:' %} {% for product in object.cart.products.all %}{{ product }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    <p>{% trans 'Endereço de Envio:' %} {{ object.shipping_address.get_address }}</p>
+    <p>{% trans 'Endereço de Cobrança:' %} {{ object.billing_address.get_address }}</p>
+    <p>{% trans 'Total do Carrinho: R$' %} {{ object.cart.total }}</p>
+    <p>{% trans 'Total do Frete: R$' %} {{ object.shipping_total }}</p>
+    <p class="text-warning">{% trans 'Total do Pedido: R$' %} {{ object.total }}</p>
     <form class='form' method='POST' action="">{% csrf_token %}
-      <button type='submit' class="btn btn-success">Finalizar</button>
+      <button type='submit' class="btn btn-success">{% trans 'Finalizar' %}</button>
     </form>
   </div>
   {% endif %}

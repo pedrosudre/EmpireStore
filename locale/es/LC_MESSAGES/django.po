@@ -20,11 +20,11 @@ msgstr ""
 
 #: empirestore/views.py:18
 msgid "Página de início"
-msgstr "SEXO KKK"
+msgstr "Página Principal"
 
 #: empirestore/views.py:19
 msgid "Bem vindo a Pagina Inicial"
-msgstr "EL CAMACHO SEXO"
+msgstr "Bienvenido a la página de inicio"
 
 #: venv/lib/python3.10/site-packages/click/_termui_impl.py:496
 #, python-brace-format

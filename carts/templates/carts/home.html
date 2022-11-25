@@ -1,14 +1,15 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 <div class="container text-light">
-  <h1>Carrinho</h1>
+  <h1>{% trans 'Carrinho' %}</h1>
   {% if cart.products.exists %}
   <table class="table cart-table">
     <thead>
       <tr>
         <th>#</th>
-        <th>Nome</th>
-        <th>Preço</th>
+        <th>{% trans 'Nome' %}</th>
+        <th>{% trans 'Preço' %}</th>
       </tr>
 
     </thead>
@@ -33,7 +34,7 @@
       </tr>
       <tr>
         <td colspan="2"></td>
-        <td><a class='btn btn-lg btn-success' href='{% url "cart:checkout" %}'>Conferir compra</a></td>
+        <td><a class='btn btn-lg btn-success' href='{% url "cart:checkout" %}'>{% trans 'Conferir compra' %}</a></td>
       </tr>
     </tbody>
   </table>
@@ -41,7 +42,7 @@
     {% include 'carts/snippets/remove-product.html' %}
   </div>
   {% else %}
-    <p class='lead'>Carrinho vazio</p>
+    <p class='lead'>{% trans 'Carrinho vazio' %}</p>
   {% endif %}
 </div>
 {% endblock %}

@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 
 {% block content %}
 <div class="container text-white w-50" style="margin-top: 20%"> 
 <form id="post-form" method="POST" action="checkview" class="d-flex flex-column ">
         {% csrf_token %}
-        <label>Nome da Sala</label>
+        <label>{% trans 'Nome da Sala' %}</label>
         <input type="text" name="room_name" id="room_name" width="100px" />
-        <label>Seu Nome</label>
+        <label>{% 'Seu Nome' %}</label>
         <input type="text" name="username" id="username" width="100px" />
         <input type="submit" class="btn btn-success mt-2" value="Entrar na Sala">
     </form>

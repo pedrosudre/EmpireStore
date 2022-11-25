@@ -1,5 +1,7 @@
 from django import forms
 from django.contrib.auth import get_user_model
+from django.utils.translation import gettext_lazy as _
+
 
 User = get_user_model()
 class ContactForm(forms.Form):
@@ -7,7 +9,7 @@ class ContactForm(forms.Form):
         widget=forms.TextInput(
             attrs={
                     "class": "form-control", 
-                    "placeholder": "Seu nome completo"
+                    "placeholder": _("Seu nome completo")
                 }
             )
         )
@@ -15,7 +17,7 @@ class ContactForm(forms.Form):
         widget=forms.EmailInput(
             attrs={
                     "class": "form-control", 
-                    "placeholder": "Digite seu email"
+                    "placeholder": _("Digite seu e-mail")
                 }
             )
         )
@@ -23,7 +25,7 @@ class ContactForm(forms.Form):
         widget=forms.Textarea(
             attrs={
                     "class": "form-control", 
-                    "placeholder": "Digite sua mensagem"
+                    "placeholder": _("Digite sua mensagem")
                 }
             )
         )
@@ -31,5 +33,5 @@ class ContactForm(forms.Form):
     def clean_email(self):
         email = self.cleaned_data.get(".")
         if not "gmail.com" in email:
-            raise forms.ValidationError("O Email deve ser do gmail.com")
+            raise forms.ValidationError(_("O Email deve ser do gmail.com"))
         return email

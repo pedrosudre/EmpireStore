@@ -3,20 +3,237 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-24 11:47+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2022-11-24 15:02-0300\n"
+"PO-Revision-Date: 2022-11-24 15:03-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.1\n"
+
+#: accounts/forms.py:11 accounts/forms.py:15
+msgid "Usuário"
+msgstr ""
+
+#: accounts/forms.py:12 accounts/forms.py:17
+msgid "Senha"
+msgstr ""
+
+#: accounts/forms.py:18
+msgid "Confirme sua senha"
+msgstr ""
+
+#: accounts/forms.py:24
+msgid "Esse usuário já existe, escolha outro nome."
+msgstr "This user already exists, choose another name."
+
+#: accounts/forms.py:31
+msgid "Esse email já existe, tente outro!"
+msgstr "This email already exists, try another one!"
+
+#: accounts/forms.py:39
+msgid "As senhas informadas devem ser iguais!"
+msgstr "The entered passwords must be the same!"
+
+#: accounts/templates/accounts/login.html:11 templates/base/navbar.html:40
+msgid "Entrar"
+msgstr "Log in"
+
+#: accounts/templates/accounts/login.html:14
+msgid "Novo na Empire Store?"
+msgstr "New to the Empire Store?"
+
+#: accounts/templates/accounts/login.html:14
+msgid "CADASTRE-SE"
+msgstr "REGISTER"
+
+#: accounts/templates/accounts/register.html:9
+msgid "Criar conta"
+msgstr "Create an account"
+
+#: accounts/templates/accounts/register.html:12
+msgid "Continuar"
+msgstr "Continue"
+
+#: accounts/templates/accounts/snippets/form.html:10
+#: addresses/templates/addresses/form.html:18 templates/contact/view.html:30
+msgid "Enviar"
+msgstr "Submit"
+
+#: accounts/views.py:19 accounts/views.py:75
+msgid "email"
+msgstr "email"
+
+#: accounts/views.py:38 accounts/views.py:74
+msgid "username"
+msgstr ""
+
+#: accounts/views.py:39 accounts/views.py:76
+msgid "password"
+msgstr ""
+
+#: accounts/views.py:54
+msgid "Login inválido"
+msgstr "Invalid login"
+
+#: accounts/views.py:61
+msgid "Você efetuou o logout com sucesso!"
+msgstr "You have successfully logged out!"
+
+#: addresses/models.py:13
+msgid "Endereço 1"
+msgstr "Address 1"
+
+#: addresses/models.py:14
+msgid "Endereço 2"
+msgstr "Address 2"
+
+#: addresses/models.py:15
+msgid "Cidade"
+msgstr "City"
+
+#: addresses/models.py:16
+msgid "País"
+msgstr "Country"
+
+#: addresses/models.py:17
+msgid "Estado"
+msgstr "State"
+
+#: addresses/models.py:18
+msgid "CEP"
+msgstr "Zip code"
+
+#: addresses/templates/addresses/prev_addresses.html:16
+msgid "Usar esse endereço"
+msgstr "Use this address"
+
+#: carts/templates/carts/checkout-done.html:6
+msgid "Pedido realizado com sucesso."
+msgstr "Request made successfully."
+
+#: carts/templates/carts/checkout-done.html:7
+msgid "Obrigado por escolher a Empire Store!"
+msgstr "Thank you for choosing Empire Store!"
+
+#: carts/templates/carts/checkout.html:25
+msgid "Continuar como convidado"
+msgstr "Continue as guest"
+
+#: carts/templates/carts/checkout.html:35
+msgid "Endereço de envio"
+msgstr "Shipping address"
+
+#: carts/templates/carts/checkout.html:51
+msgid "Endereço de Cobrança"
+msgstr "Billing Address"
+
+#: carts/templates/carts/checkout.html:67
+msgid "Finalizar Pedido"
+msgstr "Checkout"
+
+#: carts/templates/carts/checkout.html:68
+msgid "Itens do Carrinho:"
+msgstr "Cart Items:"
+
+#: carts/templates/carts/checkout.html:69
+msgid "Endereço de Envio:"
+msgstr "Shipping Address:"
+
+#: carts/templates/carts/checkout.html:70
+msgid "Endereço de Cobrança:"
+msgstr "Billing Address:"
+
+#: carts/templates/carts/checkout.html:71
+msgid "Total do Carrinho: R$"
+msgstr "Cart Total: $"
+
+#: carts/templates/carts/checkout.html:72
+msgid "Total do Frete: R$"
+msgstr "Total Freight: $"
+
+#: carts/templates/carts/checkout.html:73
+msgid "Total do Pedido: R$"
+msgstr "Total Order: $"
+
+#: carts/templates/carts/checkout.html:75
+msgid "Finalizar"
+msgstr "Finalize"
+
+#: carts/templates/carts/home.html:5
+msgid "Carrinho"
+msgstr "Cart Items"
+
+#: carts/templates/carts/home.html:11
+msgid "Nome"
+msgstr "Name"
+
+#: carts/templates/carts/home.html:12
+msgid "Preço"
+msgstr "Price"
+
+#: carts/templates/carts/home.html:37
+msgid "Conferir compra"
+msgstr "Check purchase"
+
+#: carts/templates/carts/home.html:45
+msgid "Carrinho vazio"
+msgstr "Empty cart"
+
+#: carts/templates/carts/snippets/remove-product.html:7
+msgid "Remover"
+msgstr "To remove"
+
+#: carts/views.py:34
+msgid "products"
+msgstr ""
+
+#: carts/views.py:34
+msgid "subtotal"
+msgstr ""
+
+#: carts/views.py:34
+msgid "total"
+msgstr ""
+
+#: carts/views.py:47
+msgid "Esse produto acabou!"
+msgstr "This product is gone!"
+
+#: chat/templates/chat_home.html:8
+msgid "Nome da Sala"
+msgstr "Room Name"
+
+#: chat/templates/room.html:11
+msgid "Atendimento"
+msgstr "Attendance"
+
+#: chat/views.py:39
+msgid "Mensagem enviada com sucesso"
+msgstr "Message sent successfully"
+
+#: empirestore/forms.py:12
+msgid "Seu nome completo"
+msgstr "Your full name"
+
+#: empirestore/forms.py:20
+msgid "Digite seu e-mail"
+msgstr "Type your e-mail"
+
+#: empirestore/forms.py:28
+msgid "Digite sua mensagem"
+msgstr "Enter your message"
+
+#: empirestore/forms.py:36
+msgid "O Email deve ser do gmail.com"
+msgstr "Email must be from gmail.com"
 
 #: empirestore/views.py:18
 msgid "Página de início"
@@ -25,6 +242,118 @@ msgstr "Home Page"
 #: empirestore/views.py:19
 msgid "Bem vindo a Pagina Inicial"
 msgstr "Welcome to Homepage"
+
+#: empirestore/views.py:25
+msgid "Você é um usuário Premium"
+msgstr ""
+
+#: empirestore/views.py:35
+msgid "Como podemos te ajudar?"
+msgstr "How can we help you?"
+
+#: empirestore/views.py:36
+msgid "Ou envie-nos um e-mail"
+msgstr "Or send us an email"
+
+#: orders/models.py:100
+msgid "Executando"
+msgstr ""
+
+#: orders/models.py:102
+msgid "Atualizando"
+msgstr ""
+
+#: products/templates/products/detail.html:15
+#: products/templates/products/snippets/card.html:11
+msgid "R$"
+msgstr "$"
+
+#: products/templates/products/detail.html:20
+msgid "DESCRIÇÃO DO PRODUTO"
+msgstr "PRODUCT DESCRIPTION"
+
+#: products/templates/products/detail.html:26
+msgid "INFORMAÇÕES TÉCNICAS"
+msgstr "TECHNICAL INFORMATION"
+
+#: products/templates/products/list.html:25
+msgid "Página"
+msgstr "Page"
+
+#: products/templates/products/list.html:25
+msgid "de"
+msgstr "of"
+
+#: products/templates/products/snippets/card.html:12
+msgid "Detalhes"
+msgstr "Details"
+
+#: products/templates/products/snippets/update-cart.html:10
+msgid "Remover do carrinho"
+msgstr "Remove from cart"
+
+#: products/templates/products/snippets/update-cart.html:12
+msgid "Adicionar ao carrinho"
+msgstr "Add to cart"
+
+#: products/views.py:82 products/views.py:90
+msgid "Esse produto não existe!"
+msgstr "This product does not exist!"
+
+#: search/templates/search/snippets/search-form.html:6
+msgid "Pesquisar"
+msgstr "Search"
+
+#: search/templates/search/view.html:7
+msgid "Resultado para"
+msgstr "Result for"
+
+#: templates/base/navbar.html:26
+msgid "Inicio"
+msgstr "Home"
+
+#: templates/base/navbar.html:29
+msgid "Produtos"
+msgstr "Products"
+
+#: templates/base/navbar.html:32
+msgid "Suporte"
+msgstr "Support"
+
+#: templates/base/navbar.html:36
+msgid "Sair"
+msgstr "Log out"
+
+#: templates/base/navbar.html:43
+msgid "Cadastro"
+msgstr "Register"
+
+#: templates/contact/view.html:14
+msgid "Chat instantâneo"
+msgstr "Instant chat"
+
+#: templates/contact/view.html:15
+msgid "Tire suas dúvidas com um de nossos atendentes em tempo real."
+msgstr "Clear your doubts with one of our attendants in real time."
+
+#: templates/contact/view.html:16
+msgid ""
+"Basta clicar em \"Iniciar atendimento\" que você será redirecionado para a "
+"pagina do chat"
+msgstr ""
+"Just click on \"Start service\" and you will be redirected to the chat page"
+
+#: templates/contact/view.html:17
+msgid ""
+"depois basta colocar seu nome e o assunto, que um de nossos atendentes irá "
+"esclarecer suas dúvidas."
+msgstr ""
+"then just put your name and the subject, and one of our attendants will "
+"clarify your doubts."
+
+#: templates/contact/view.html:22
+msgid "Iniciar atendimento"
+msgstr "Start service"
 
 #: venv/lib/python3.10/site-packages/click/_termui_impl.py:496
 #, python-brace-format
@@ -943,8 +1272,10 @@ msgid "Yes"
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/forms/widgets.py:772
+#, fuzzy
+#| msgid "Nome"
 msgid "No"
-msgstr ""
+msgstr "Name"
 
 #. Translators: Please do not add spaces around commas.
 #: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:853
@@ -1370,8 +1701,8 @@ msgid ""
 "If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
 "including the “Referrer-Policy: no-referrer” header, please remove them. The "
 "CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
-"rel=\"noreferrer\" …> for links to third-party sites."
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/csrf.py:136
@@ -1480,9 +1811,9 @@ msgstr ""
 #, python-format
 msgid ""
 "You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:230
@@ -1508,3 +1839,8 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Iniciar atendimento"
+#~ msgid "Basta clicar em \"Iniciar atendimento\" "
+#~ msgstr "Start service"

@@ -3,6 +3,8 @@ from django.db import models
 from empirestore.utils import unique_slug_generator
 from django.db.models.signals import pre_save
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
+
 
 #Custom queryset
 class ProductQuerySet(models.query.QuerySet):

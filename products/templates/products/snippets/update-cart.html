@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <form class='form-product-ajax' method='POST' action='{% url "cart:update" %}' 
   data-endpoint='{% url "cart:update" %}' 
   class="form"> {% csrf_token %}
@@ -5,9 +7,9 @@
 
   <span class='submit-span'>
     {% if product in cart.products.all %}
-      <button type='submit' class='btn btn-danger mt-1'>Remover do carrinho</button>
+      <button type='submit' class='btn btn-danger mt-1'>{% trans 'Remover do carrinho' %}</button>
     {% else %}
-      <button type='submit' class='btn btn-success mt-1'>Adicionar ao carrinho</button>
+      <button type='submit' class='btn btn-success mt-1'>{% trans 'Adicionar ao carrinho' %}</button>
     {% endif %}
 
   </span>

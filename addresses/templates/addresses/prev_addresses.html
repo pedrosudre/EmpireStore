@@ -1,3 +1,4 @@
+{% load i18n %}
 {% if address_qs.exists %}
   <form method='POST' action='{{ action_url }}'> {% csrf_token %}
     {% if next_url %}
@@ -12,6 +13,6 @@
       {{ address.address_line_1 }}
       </label><br/>
     {% endfor %}
-  <button type='submit' class='btn btn-success'>Usar esse endereço</button>
+  <button type='submit' class='btn btn-success'>{% trans 'Usar esse endereço' %}</button>
   </form>
 {% endif %}
