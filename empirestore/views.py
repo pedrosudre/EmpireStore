@@ -11,6 +11,9 @@ from django.http import HttpResponse
 from weasyprint import HTML
 from django.utils.translation import gettext as _
 from django.utils import translation
+from django.db.models import Count
+from chartjs.views.lines import BaseLineChartView
+
 
 
 def home_page(request):
@@ -60,3 +63,4 @@ class RelatorioProdutosView(WeasyTemplateView):
             response = HttpResponse(pdf, content_type='application/pdf')
             response['Content-Disposition'] = 'inline; filename="relatorio-produtos.pdf"'
         return response
+

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-25 22:25-0300\n"
+"POT-Creation-Date: 2022-11-26 09:18-0300\n"
 "PO-Revision-Date: 2022-11-25 22:59-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -42,7 +42,7 @@ msgstr "This email already exists, try another one!"
 msgid "As senhas informadas devem ser iguais!"
 msgstr "The entered passwords must be the same!"
 
-#: accounts/templates/accounts/login.html:11 templates/base/navbar.html:40
+#: accounts/templates/accounts/login.html:11 templates/base/navbar.html:41
 msgid "Entrar"
 msgstr "Login"
 
@@ -235,23 +235,23 @@ msgstr "Enter your message"
 msgid "O Email deve ser do gmail.com"
 msgstr "E-mail must be from gmail.com"
 
-#: empirestore/views.py:18
+#: empirestore/views.py:21
 msgid "Página de início"
 msgstr "Home page"
 
-#: empirestore/views.py:19
+#: empirestore/views.py:22
 msgid "Bem vindo a Pagina Inicial"
 msgstr "Welcome to Homepage"
 
-#: empirestore/views.py:25
+#: empirestore/views.py:28
 msgid "Você é um usuário Premium"
 msgstr ""
 
-#: empirestore/views.py:35
+#: empirestore/views.py:38
 msgid "Como podemos te ajudar?"
 msgstr "How can we help you?"
 
-#: empirestore/views.py:36
+#: empirestore/views.py:39
 msgid "Ou envie-nos um e-mail"
 msgstr "Or send us an email"
 
@@ -300,25 +300,29 @@ msgstr "Search"
 msgid "Resultado para"
 msgstr "Result for"
 
-#: templates/base/navbar.html:26
+#: templates/base/navbar.html:27
 msgid "Inicio"
 msgstr "Home"
 
-#: templates/base/navbar.html:29
+#: templates/base/navbar.html:30
 msgid "Produtos"
 msgstr "Products"
 
-#: templates/base/navbar.html:32
+#: templates/base/navbar.html:33
 msgid "Suporte"
 msgstr "Support"
 
-#: templates/base/navbar.html:36
+#: templates/base/navbar.html:37
 msgid "Sair"
 msgstr "Log out"
 
-#: templates/base/navbar.html:43
+#: templates/base/navbar.html:44
 msgid "Cadastro"
 msgstr "Register"
+
+#: templates/base/navbar.html:47
+msgid "Relátorio"
+msgstr "Report"
 
 #: templates/contact/view.html:14
 msgid "Chat instantâneo"
@@ -346,6 +350,12 @@ msgstr ""
 #: templates/contact/view.html:22
 msgid "Iniciar atendimento"
 msgstr "Start service"
+
+#: venv/lib/python3.10/site-packages/bootstrap4/components.py:17
+#: venv/lib/python3.10/site-packages/bootstrap4/templates/bootstrap4/form_errors.html:3
+#: venv/lib/python3.10/site-packages/bootstrap4/templates/bootstrap4/messages.html:4
+msgid "close"
+msgstr ""
 
 #: venv/lib/python3.10/site-packages/click/_termui_impl.py:496
 #, python-brace-format
@@ -1691,8 +1701,8 @@ msgid ""
 "If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
 "including the “Referrer-Policy: no-referrer” header, please remove them. The "
 "CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/csrf.py:136
@@ -1801,9 +1811,9 @@ msgstr ""
 #, python-format
 msgid ""
 "You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:230

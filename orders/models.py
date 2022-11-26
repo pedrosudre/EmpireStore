@@ -7,7 +7,7 @@ from carts.models import Cart
 from empirestore.utils import unique_order_id_generator
 from django.conf import settings
 from django.utils.translation import gettext_lazy as _
-
+import datetime
 
 ORDER_STATUS_CHOICES = (
     ('created', 'Criado'),
@@ -44,6 +44,7 @@ class Order(models.Model):
     shipping_total = models.DecimalField(default = 20.00, max_digits = 100, decimal_places = 2)
     total = models.DecimalField(default = 0.00, max_digits = 100, decimal_places = 2)
     active = models.BooleanField(default=True)
+    data = models.DateTimeField(default=datetime.datetime.now())
 
     def __str__(self):
         return self.order_id

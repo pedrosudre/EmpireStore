@@ -1,5 +1,0 @@
-<p>Itens do pedido: {% for product in object.cart.products.all %}{{ product }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
-    <p>Endereço de Envio: {{ object.shipping_address.get_address }}</p>
-    <p>Total do Pedido: {{ object.total }}</p>
-    <p>Status: {{object.request.status}}</p>
-    <form class='form' method='POST' action="">{% csrf_token %}
