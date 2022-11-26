@@ -27,7 +27,7 @@
                 <a class="mr-2" href="?page=1&nome={{request.GET.nome}}"style="color: rgb(248, 190, 0);">&lt;&lt;</a>
                 <a href="?page={{ page_obj.previous_page_number }}&nome={{request.GET.nome}}"style="color: rgb(248, 190, 0);">&lt;</a>
             {% else %}
-                <a class="mr-2" href="?page=1">&lt;&lt;</a>
+                <a class="mr-2" href="?page=1" style="color: rgb(248, 190, 0);">&lt;&lt;</a>
                 <a href="?page={{ page_obj.previous_page_number }}"style="color: rgb(248, 190, 0);">&lt;</a>
                 {% endif %}
             {% endif %}
@@ -35,7 +35,7 @@
 
         <span class="text-white">Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
 
-        <div class="ml-2">                
+        <div class="ml-2 mb-5">                
             {% if page_obj.has_next %}
                 {% if request.GET.nome %}
                 <a class="ml-2"  href="?page={{ page_obj.next_page_number }}&nome={{request.GET.nome}}" style="color: rgb(248, 190, 0);">&gt;</a>

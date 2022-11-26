@@ -48,17 +48,11 @@ def login_page(request):
             else:
                 # Redireciona para uma página de sucesso.
                 return redirect("/")
-        else:
-            #Retorna uma mensagem de erro de 'invalid login'.
-            print("Login inválido")
     return render(request, "accounts/login.html", context)
 
 def logout_page(request):
-    context = {
-                "content": "Você efetuou o logout com sucesso! :)"
-              }
     logout(request)
-    return render(request, "accounts/logout.html", context)
+    return render(request, "accounts/logout.html")
 
 User = get_user_model()
 def register_page(request):

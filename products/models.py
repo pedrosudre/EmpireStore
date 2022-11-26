@@ -16,7 +16,6 @@ class ProductQuerySet(models.query.QuerySet):
 
     def search(self, query):
         lookups = (Q(title__contains = query) | 
-                        Q(description__contains = query) | 
                         Q(price__contains = query))
         return self.filter(lookups).distinct()
 
