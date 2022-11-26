@@ -6,7 +6,6 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 
-#Custom queryset
 class ProductQuerySet(models.query.QuerySet):
     
     def active(self):
