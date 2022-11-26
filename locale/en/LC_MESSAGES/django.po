@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-25 10:15-0300\n"
-"PO-Revision-Date: 2022-11-24 15:03-0300\n"
+"POT-Creation-Date: 2022-11-25 22:25-0300\n"
+"PO-Revision-Date: 2022-11-25 22:37-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -69,7 +69,7 @@ msgstr "Submit"
 
 #: accounts/views.py:19 accounts/views.py:75
 msgid "email"
-msgstr "email"
+msgstr ""
 
 #: accounts/views.py:38 accounts/views.py:74
 msgid "username"
@@ -161,7 +161,7 @@ msgstr "Total Freight: $"
 
 #: carts/templates/carts/checkout.html:73
 msgid "Total do Pedido: R$"
-msgstr "Total Order: $"
+msgstr "Order Total: $"
 
 #: carts/templates/carts/checkout.html:75
 msgid "Finalizar"
@@ -169,7 +169,7 @@ msgstr "Finalize"
 
 #: carts/templates/carts/home.html:5
 msgid "Carrinho"
-msgstr "Cart Items"
+msgstr "Cart"
 
 #: carts/templates/carts/home.html:11
 msgid "Nome"
@@ -233,11 +233,11 @@ msgstr "Enter your message"
 
 #: empirestore/forms.py:36
 msgid "O Email deve ser do gmail.com"
-msgstr "Email must be from gmail.com"
+msgstr "E-mail must be from gmail.com"
 
 #: empirestore/views.py:18
 msgid "Página de início"
-msgstr "Home Page"
+msgstr "Home page"
 
 #: empirestore/views.py:19
 msgid "Bem vindo a Pagina Inicial"
@@ -1264,10 +1264,8 @@ msgid "Yes"
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/forms/widgets.py:772
-#, fuzzy
-#| msgid "Nome"
 msgid "No"
-msgstr "Name"
+msgstr ""
 
 #. Translators: Please do not add spaces around commas.
 #: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:853
@@ -1693,8 +1691,8 @@ msgid ""
 "If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
 "including the “Referrer-Policy: no-referrer” header, please remove them. The "
 "CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
-"rel=\"noreferrer\" …> for links to third-party sites."
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/csrf.py:136
@@ -1803,9 +1801,9 @@ msgstr ""
 #, python-format
 msgid ""
 "You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
 msgstr ""
 
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:230
@@ -1831,14 +1829,3 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
-
-#~ msgid "Página"
-#~ msgstr "Page"
-
-#~ msgid "de"
-#~ msgstr "of"
-
-#, fuzzy
-#~| msgid "Iniciar atendimento"
-#~ msgid "Basta clicar em \"Iniciar atendimento\" "
-#~ msgstr "Start service"
