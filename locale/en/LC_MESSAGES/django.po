@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-26 09:18-0300\n"
+"POT-Creation-Date: 2022-11-26 16:15-0300\n"
 "PO-Revision-Date: 2022-11-25 22:59-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -42,7 +42,7 @@ msgstr "This email already exists, try another one!"
 msgid "As senhas informadas devem ser iguais!"
 msgstr "The entered passwords must be the same!"
 
-#: accounts/templates/accounts/login.html:11 templates/base/navbar.html:41
+#: accounts/templates/accounts/login.html:11 templates/base/navbar.html:44
 msgid "Entrar"
 msgstr "Login"
 
@@ -63,29 +63,9 @@ msgid "Continuar"
 msgstr "Continue"
 
 #: accounts/templates/accounts/snippets/form.html:10
-#: addresses/templates/addresses/form.html:18 templates/contact/view.html:30
+#: addresses/templates/addresses/form.html:18 templates/contact/view.html:78
 msgid "Enviar"
 msgstr "Submit"
-
-#: accounts/views.py:19 accounts/views.py:75
-msgid "email"
-msgstr ""
-
-#: accounts/views.py:38 accounts/views.py:74
-msgid "username"
-msgstr ""
-
-#: accounts/views.py:39 accounts/views.py:76
-msgid "password"
-msgstr ""
-
-#: accounts/views.py:54
-msgid "Login inválido"
-msgstr "Invalid login"
-
-#: accounts/views.py:61
-msgid "Você efetuou o logout com sucesso!"
-msgstr "You have successfully logged out!"
 
 #: addresses/models.py:13
 msgid "Endereço 1"
@@ -207,9 +187,15 @@ msgstr ""
 msgid "Esse produto acabou!"
 msgstr "This product is gone!"
 
-#: chat/templates/chat_home.html:8
+#: chat/templates/chat_home.html:9
 msgid "Nome da Sala"
 msgstr "Room Name"
+
+#: chat/templates/chat_home.html:11
+#, fuzzy
+#| msgid "Nome"
+msgid "Seu Nome"
+msgstr "Name"
 
 #: chat/templates/room.html:11
 msgid "Atendimento"
@@ -231,10 +217,6 @@ msgstr "Type your e-mail"
 msgid "Digite sua mensagem"
 msgstr "Enter your message"
 
-#: empirestore/forms.py:36
-msgid "O Email deve ser do gmail.com"
-msgstr "E-mail must be from gmail.com"
-
 #: empirestore/views.py:21
 msgid "Página de início"
 msgstr "Home page"
@@ -255,11 +237,11 @@ msgstr "How can we help you?"
 msgid "Ou envie-nos um e-mail"
 msgstr "Or send us an email"
 
-#: orders/models.py:100
+#: orders/models.py:101
 msgid "Executando"
 msgstr ""
 
-#: orders/models.py:102
+#: orders/models.py:103
 msgid "Atualizando"
 msgstr ""
 
@@ -309,37 +291,37 @@ msgid "Produtos"
 msgstr "Products"
 
 #: templates/base/navbar.html:33
-msgid "Suporte"
-msgstr "Support"
-
-#: templates/base/navbar.html:37
-msgid "Sair"
-msgstr "Log out"
-
-#: templates/base/navbar.html:44
-msgid "Cadastro"
-msgstr "Register"
-
-#: templates/base/navbar.html:47
 msgid "Relátorio"
 msgstr "Report"
 
-#: templates/contact/view.html:14
+#: templates/base/navbar.html:36
+msgid "Suporte"
+msgstr "Support"
+
+#: templates/base/navbar.html:40
+msgid "Sair"
+msgstr "Log out"
+
+#: templates/base/navbar.html:47
+msgid "Cadastro"
+msgstr "Register"
+
+#: templates/contact/view.html:16
 msgid "Chat instantâneo"
 msgstr "Instant chat"
 
-#: templates/contact/view.html:15
+#: templates/contact/view.html:17
 msgid "Tire suas dúvidas com um de nossos atendentes em tempo real."
 msgstr "Clear your doubts with one of our attendants in real time."
 
-#: templates/contact/view.html:16
+#: templates/contact/view.html:18
 msgid ""
 "Basta clicar em \"Iniciar atendimento\" que você será redirecionado para a "
 "pagina do chat"
 msgstr ""
 "Just click on \"Start service\" and you will be redirected to the chat page"
 
-#: templates/contact/view.html:17
+#: templates/contact/view.html:19
 msgid ""
 "depois basta colocar seu nome e o assunto, que um de nossos atendentes irá "
 "esclarecer suas dúvidas."
@@ -347,7 +329,7 @@ msgstr ""
 "then just put your name and the subject, and one of our attendants will "
 "clarify your doubts."
 
-#: templates/contact/view.html:22
+#: templates/contact/view.html:24
 msgid "Iniciar atendimento"
 msgstr "Start service"
 
@@ -1839,3 +1821,12 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Login inválido"
+#~ msgstr "Invalid login"
+
+#~ msgid "Você efetuou o logout com sucesso!"
+#~ msgstr "You have successfully logged out!"
+
+#~ msgid "O Email deve ser do gmail.com"
+#~ msgstr "E-mail must be from gmail.com"

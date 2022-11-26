@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load static %}
+
 {% block base_head %}
 <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 {% endblock %}
 {% block content %}   
+
     <div class='container bg-dark text-white'>
         <div class='text-center pb-5 bg-dark'>
             <h1>{{ title }}</h1>
@@ -21,16 +23,70 @@
         <div class=" pl-5 pt-2 pb-4">
             <button type="button" class="btn btn-success"><a href="{% url 'chat_home' %} ">{% trans 'Iniciar atendimento' %}</a></button>
         </div> 
-        <div class='row pl-4 pt-4 pb-4'>
-            <div class='col'>
-                <h4 class="pl-3">{{ content }}</h4>
-                <div class='col-sm-6 col-12'>
-                    <form method='POST' class="text-dark"> {% csrf_token %}
-                        {{ form }}
-                        <button type='submit' class='btn btn-success mt-3 px-5 w-100'>{% trans 'Enviar' %}</button>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
+
+<div class="container text-white ml-3">
+
+
+    <section id="contact" class="section-padding bg-gray">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-title wow fadeInDown d-flex justify-content-start my-3" data-wow-delay="0.3s">{{ content }}</h2>
+            <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+          </div>
+          <div class="container">
+              {% if messages %}
+                  {% for m in messages %}
+                      <div class="alert alert-{{ m.extra_tags }}">
+                          <button type="button" class="close" data-dismiss="alert"></button>
+                          <strong>{{ m }}</strong>
+                      </div>
+                  {% endfor %}
+              {% endif %}
+          </div>
+  
+          <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-7 col-md-12 col-sm-12">
+              <div class="contact-block">
+                <form id="contato" method="post" action="{% url 'contact' %}">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" placeholder="E-mail" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                     <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" placeholder="Assunto" id="assunto" name="assunto" class="form-control" required data-error="Please enter your subject">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <textarea class="form-control" id="mensagem" placeholder="Mensagem" name="mensagem" rows="7" data-error="Write your message" required></textarea>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="submit-button text-left">
+                        <button type='submit' class='btn btn-success mt-3 px-5 w-100'>{% trans 'Enviar' %}</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+</div>
 {% endblock %}

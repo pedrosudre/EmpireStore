@@ -7,6 +7,7 @@
 {% url 'register' as register_url %}
 {% url 'cart:home' as cart_url %}
 {% url 'relatorio-produtos' as relatorio_url %}
+{% url 'dashboard' as dashboard_url %}
 
 {% block content %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3 mt-2">
@@ -18,6 +19,7 @@
       {% else %} Empire Store
       {% endif %}
     </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,9 +31,14 @@
         <li class="nav-item {% if request.path == products_list_url %} active {% endif %}">
           <a class="nav-link" href="{{ products_list_url }}">{% trans 'Produtos' %}</a>
         </li>
-        <li class="nav-item {% if request.path == register %} active {% endif %}"> 
-          <a class="nav-link" href="{{ relatorio_url }}" target="_blank">{% trans 'Relátorio' %}</a> 
+        {% if user.is_superuser %}
+        <li class="nav-item {% if request.path == relatorio_url %} active {% endif %}">
+          <a class="nav-link" href="{{ relatorio_url }}" target="_blank">Relatório</a>
         </li>
+        <li class="nav-item {% if request.path == dashboard_url %} active {% endif %}">
+          <a class="nav-link" href="{{ dashboard_url }}" target="_blank">Gráfico</a> 
+        </li>
+        {% endif %}
         <li class="nav-item {% if request.path == contact_url %} active {% endif %}">
           <a class="nav-link" href="{{ contact_url }}">{% trans 'Suporte' %}</a>
         </li>
@@ -56,6 +63,8 @@
             <i class="fa fa-shopping-cart"></i>
           </a>
         </li>
+        <div>
+        </div>
       </ul>
       {% include 'search/snippets/search-form.html' %}
     </div>

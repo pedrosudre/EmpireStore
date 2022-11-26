@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load static %}
 
 {% block content %}
 <div class="container text-white w-50" style="margin-top: 20%"> 
@@ -7,7 +8,7 @@
         {% csrf_token %}
         <label>{% trans 'Nome da Sala' %}</label>
         <input type="text" name="room_name" id="room_name" width="100px" />
-        <label>{% 'Seu Nome' %}</label>
+        <label>{% trans 'Seu Nome' %}</label>
         <input type="text" name="username" id="username" width="100px" />
         <input type="submit" class="btn btn-success mt-2" value="Entrar na Sala">
     </form>
