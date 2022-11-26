@@ -25,11 +25,8 @@ def relatorio_faturamento(request):
     cont = 0
     mes = datetime.datetime.now().month + 1
     ano = datetime.datetime.now().year
-    for i in range(12): 
+    for i in range(1, 12): 
         mes -= 1
-        if mes == 0:
-            mes = 12
-            ano -= 1
         
         y = sum([i.total for i in x if i.data.month == mes and i.data.year == ano])
         labels.append(meses[mes-1])

@@ -29,6 +29,9 @@
         <li class="nav-item {% if request.path == products_list_url %} active {% endif %}">
           <a class="nav-link" href="{{ products_list_url }}">{% trans 'Produtos' %}</a>
         </li>
+        <li class="nav-item {% if request.path == register %} active {% endif %}"> 
+          <a class="nav-link" href="{{ relatorio_url }}" target="_blank">{% trans 'Relátorio' %}</a> 
+        </li>
         <li class="nav-item {% if request.path == contact_url %} active {% endif %}">
           <a class="nav-link" href="{{ contact_url }}">{% trans 'Suporte' %}</a>
         </li>
@@ -42,9 +45,6 @@
         </li>
         <li class="nav-item {% if request.path == register %} active {% endif %}"> 
           <a class="nav-link" href="{{ register_url }}">{% trans 'Cadastro' %}</a> 
-        </li>
-        <li class="nav-item {% if request.path == register %} active {% endif %}"> 
-          <a class="nav-link" href="{{ relatorio_url }}" target="_blank">{% trans 'Relátorio' %}</a> 
         </li>
 
         {% endif %}
