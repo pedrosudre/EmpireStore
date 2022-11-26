@@ -44,7 +44,7 @@ msgstr "The entered passwords must be the same!"
 
 #: accounts/templates/accounts/login.html:11 templates/base/navbar.html:40
 msgid "Entrar"
-msgstr "Log in"
+msgstr "Login"
 
 #: accounts/templates/accounts/login.html:14
 msgid "Novo na Empire Store?"
