@@ -18,17 +18,11 @@ from chartjs.views.lines import BaseLineChartView
 
 def home_page(request):
     context = {
-                    "title": _("Página de início"),
-                    "content": _("Bem vindo a Pagina Inicial"),
+                    "title": _("Empire Store"),
               }
     lang = translation.get_language()
     context['lang'] = lang
     translation.activate(lang)
-    if request.user.is_authenticated:
-        context["premium_content"] = _("Você é um usuário Premium")
-        lang = translation.get_language()
-        context['lang'] = lang
-        translation.activate(lang)
     return render(request, "home_page.html", context)
     
 

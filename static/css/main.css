@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@font-face {
+    font-family: starjedi;
+    src: url(fonts/Starjedi.ttf);
+}
 
+.bg-dark {
+    background-color: rgb(8, 7, 7) !important;
+}
 
-body {
-    font-family: 'Aldrich', sans-serif;
-    color: red;
+.text-primary {
+    font-family: starjedi;
+    color: rgb(248, 190, 0) !important;
+    
 }

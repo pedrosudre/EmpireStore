@@ -3,10 +3,11 @@
 {% load static %}
     
 {% block content %}
-<div class="container text-white">
-    <div class='text-center'>
-         <h1>{{ title }}</h1>
-             <p>{{ content }}</p>
+<div class="container">
+    <div class='text-center text-primary'>
+		<h1>Empire <div>
+			Store
+		</div></h1>
     </div>
     
 	<div class='row'>
@@ -16,13 +17,5 @@
 		</div>
 	</div>
 
-	{% if request.user.is_authenticated %}
-		<div class='row'>
-		<div class='col'>
-			<h1>Premium</h1>
-			<p>{{ premium_content }}</p>
-		</div>
-		</div>
-	{% endif %}
 </div>
 {% endblock %}

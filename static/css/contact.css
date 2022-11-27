@@ -5,15 +5,15 @@ button a {
 
  /* link que foi visitado */
  a:visited {
-     color: rgb(255, 255, 255);
+     color: rgb(19, 19, 19);
  }
  
  /* mouse hover */
  a:hover {
-     color: #ffffff;
+     color: #1a1a1a;
  }
  
  /* link selecionado */
  a:active {
-     color: rgb(255, 255, 255);
+     color: rgb(17, 17, 17);
  }
