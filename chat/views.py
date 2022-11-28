@@ -7,7 +7,11 @@ from django.utils.translation import gettext_lazy as _
 
 # Create your views here.
 def home(request):
-    return render(request, 'chat_home.html')
+    context = {
+        'rooms': Room.objects.all(),
+    } 
+    
+    return render(request, 'chat_home.html', context)
 
 def room(request, room):
     username = request.GET.get('username')
@@ -43,3 +47,5 @@ def getMessages(request, room):
 
     messages = Message.objects.filter(room=room_details.id)
     return JsonResponse({"messages":list(messages.values())})
+
+

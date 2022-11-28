@@ -3,7 +3,12 @@
 {% load static %}
 
 {% block content %}
-
+{% if user.is_superuser %}
+<div class="container text-warning">
+{{ rooms }}
+</div>
+{% endif %}
+</div>
 <div class="container text-white w-50 border border-warning" style="margin-top: 10%"> 
     <div>
         <h1 class="my-4 text-white text-center">Atendimento</h1>
@@ -16,9 +21,16 @@
         <input type="text" name="username" id="username" width="100px" />
         <input type="submit" class="btn btn-warning my-4" value="Entrar na Sala">
     </form>
+    
 </div>
 
 
 
+
+<script>
+    $(document).ready(function () {
+            $('.toast').toast('show');
+    });
+</script>
 
 {% endblock %}
