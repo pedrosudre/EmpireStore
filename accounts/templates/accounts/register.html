@@ -3,13 +3,13 @@
 {% block content %}
 
 <div class="row" style="margin-top: 10%">
-    <div class="container d-flex justify-content-center text-light" >
+    <div class="container d-flex justify-content-center text-light text-alexandria" >
         <div class="col">
             <form class="p-4 border border border-warning rounded col-md-10 col-lg-5 mx-auto d-flex flex-column mt-4 w-70 " method='POST'>
                 <h2 class="d-flex justify-content-center mb-4 text-white">{% trans 'Criar conta' %}</h2>
                 {% csrf_token %}
                     {{form}}
-                <button type='submit' class='btn btn-warning mt-4 w-100'>{% trans 'Continuar' %}</button>
+                <button type='submit' class='btn btn-warning mt-4 w-100 text-alexandria'>{% trans 'Continuar' %}</button>
             </form>
         </div>
     </div>

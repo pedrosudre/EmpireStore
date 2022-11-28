@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-<div class="container text-light">
-  <h1>{% trans 'Carrinho' %}</h1>
+<div class="container text-light text-alexandria-light">
+  <h1 class="text-alexandria">{% trans 'Carrinho' %}</h1>
   {% if cart.products.exists %}
   <table class="table cart-table">
     <thead>
-      <tr>
+      <tr class="text-alexandria">
         <th>#</th>
         <th>{% trans 'Nome' %}</th>
         <th>{% trans 'Preço' %}</th>
@@ -30,7 +30,7 @@
       </tr> -->
       <tr class="text-warning">
         <td colspan="2"></td>
-        <td><b>Total</b> R$<span class="cart-total"> {{ cart.total }} </span> </td>
+        <td class="text-alexandria"><b>Total</b> R$<span class="cart-total"> {{ cart.total }} </span> </td>
       </tr>
       <tr>
         <td colspan="2"></td>
@@ -42,7 +42,7 @@
     {% include 'carts/snippets/remove-product.html' %}
   </div>
   {% else %}
-    <p class='lead'>{% trans 'Carrinho vazio' %}</p>
+    <p class='lead text-warning'>{% trans 'Carrinho vazio' %}</p>
   {% endif %}
 </div>
 {% endblock %}

@@ -3,78 +3,69 @@
 {% block content %}
 
 
-<style>
-  input[type="text"] {
-    width: 300px;
-
-  }
-
-
-
- 
-</style>
-
-
   {% if not billing_profile %}
-    <div class='row text-center'>
-      <div class='col-12 col-md-6'>
-        <p class='lead'>Login</p>
-        {% include 'accounts/snippets/form.html' with form=login_form next_url=request.build_absolute_uri %}
+  <div>
+    <div class='row text-white'>
+      <div class='col-sm-12 col-md-8 col-lg-6 border border-warning py-3' style="margin-left: 15px;">
+        <p class='lead text-alexandria'>Login</p>
+          {% include 'accounts/snippets/form.html' with form=login_form next_url=request.build_absolute_uri %}
+        </div>
       </div>
-      <div class='col-12 col-md-6'> 
-        {% trans 'Continuar como convidado' %}
+      <div class='col-sm-12 col-md-8 col-lg-6 border border-warning mt-4 p-3 text-alexandria text-white'> 
+        <div class="mb-3">{% trans 'Continuar como convidado' %}</div>
         {% url "guest_register" as guest_register_url %}
         {% include 'accounts/snippets/form.html' with form=guest_form next_url=request.build_absolute_uri action_url=guest_register_url %}
       </div>
    </div>
   {% else %}
   {% if not object.shipping_address %}
-<div class="container text-white col-8 d-flex flex-column">
-    <div class='row'> 
-        <div class='col-12 '>
-          <p class='lead'>{% trans 'Endereço de envio' %}</p>
-          <hr/>
-        </div>
-        <div class='col-6 '>
-          {% url "checkout_address_create" as checkout_address_create %}
-          {% include 'addresses/form.html' with form=address_form next_url=request.build_absolute_uri action_url=checkout_address_create address_type='shipping' %}
-        </div>
-        <div class='col-6'>
-          {% url 'checkout_address_reuse' as checkout_address_reuse %}
-          {% include 'addresses/prev_addresses.html' with address_qs=address_qs next_url=request.build_absolute_uri address_type='shipping' action_url=checkout_address_reuse %}
-        </div>
-    </div>
-      {% elif not object.billing_address %}
-    <div class="container text-white col-8 d-flex flex-column">
-      <div class='row'>
-        <div class='col-12'>
-          <p class='lead'>{% trans 'Endereço de Cobrança' %}</p>
-          <hr/>
-        </div>
-        <div class='col-6'> 
-          {% url "checkout_address_create" as checkout_address_create %}
-          {% include 'addresses/form.html' with form=address_form next_url=request.build_absolute_uri action_url=checkout_address_create address_type='billing' %}
-        </div>
-        <div class='col-6'>
-          {% url 'checkout_address_reuse' as checkout_address_reuse %}
-          {% include 'addresses/prev_addresses.html' with address_qs=address_qs next_url=request.build_absolute_uri address_type='billing' action_url=checkout_address_reuse %}
+<<div class="container d-flex justify-content-start text-white">
+
+  <div class='row'> 
+      <div class='col-12 '>
+        <p class='lead'>{% trans 'Endereço de envio' %}</p>
+        <hr/>
       </div>
-    </div>
+      <div class='col-4 d-flex flex-column'>
+        {% url "checkout_address_create" as checkout_address_create %}
+        {% include 'addresses/form.html' with form=address_form next_url=request.build_absolute_uri action_url=checkout_address_create address_type='shipping' %}
+      </div>
+      <div class='col-6'>
+        {% url 'checkout_address_reuse' as checkout_address_reuse %}
+        {% include 'addresses/prev_addresses.html' with address_qs=address_qs next_url=request.build_absolute_uri address_type='shipping' action_url=checkout_address_reuse %}
+      </div>
+  </div>
+    {% elif not object.billing_address %}
+  <div class="container d-flex justify-content-start text-white">
+    <div class='row'>
+      <div class='col-12'>
+        <p class='lead'>{% trans 'Endereço de Cobrança' %}</p>
+        <hr/>
+      </div>
+      <div class='col-4 d-flex flex-column'> 
+        {% url "checkout_address_create" as checkout_address_create %}
+        {% include 'addresses/form.html' with form=address_form next_url=request.build_absolute_uri action_url=checkout_address_create address_type='billing' %}
+      </div>
+      <div class='col-6'>
+        {% url 'checkout_address_reuse' as checkout_address_reuse %}
+        {% include 'addresses/prev_addresses.html' with address_qs=address_qs next_url=request.build_absolute_uri address_type='billing' action_url=checkout_address_reuse %}
     </div>
   </div>
-  {% else %}
-  <div class="container text-white">
-    <h1>{% trans 'Finalizar Pedido' %}</h1>
-    <p>{% trans 'Itens do Carrinho:' %} {% for product in object.cart.products.all %}{{ product }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
-    <p>{% trans 'Endereço de Envio:' %} {{ object.shipping_address.get_address }}</p>
-    <p>{% trans 'Endereço de Cobrança:' %} {{ object.billing_address.get_address }}</p>
-    <p>{% trans 'Total do Carrinho: R$' %} {{ object.cart.total }}</p>
-    <p>{% trans 'Total do Frete: R$' %} {{ object.shipping_total }}</p>
-    <p class="text-warning">{% trans 'Total do Pedido: R$' %} {{ object.total }}</p>
-    <form class='form' method='POST' action="">{% csrf_token %}
-      <button type='submit' class="btn btn-success">{% trans 'Finalizar' %}</button>
-    </form>
   </div>
-  {% endif %}
-  {% endif %}
+</div>
+{% else %}
+<div class="container text-white">
+  <h1>{% trans 'Finalizar Pedido' %}</h1>
+  <p>{% trans 'Itens do Carrinho:' %} {% for product in object.cart.products.all %}{{ product }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <p>{% trans 'Endereço de Envio:' %} {{ object.shipping_address.get_address }}</p>
+  <p>{% trans 'Endereço de Cobrança:' %} {{ object.billing_address.get_address }}</p>
+  <p>{% trans 'Total do Carrinho: R$' %} {{ object.cart.total }}</p>
+  <p>{% trans 'Total do Frete: R$' %} {{ object.shipping_total }}</p>
+  <p class="text-warning">{% trans 'Total do Pedido: R$' %} {{ object.total }}</p>
+  <form class='form' method='POST' action="">{% csrf_token %}
+    <button type='submit' class="btn btn-success">{% trans 'Finalizar' %}</button>
+  </form>
+</div>
+{% endif %}
+{% endif %}
 {% endblock %}

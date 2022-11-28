@@ -5,9 +5,9 @@
   class="form"> {% csrf_token %}
   <input type='hidden' name='product_id' value='{{ product.id }}' />
 
-  <span class='submit-span'>
+  <span class='submit-span text-alexandria-light'>
     {% if product in cart.products.all %}
-      <button type='submit' class='btn btn-danger mt-1'>{% trans 'Remover do carrinho' %}</button>
+      <button type='submit' class='btn btn-danger mt-1 text'>{% trans 'Remover do Carrinho' %}</button>
     {% else %}
       <button type='submit' class='btn btn-success mt-1'>{% trans 'Adicionar ao carrinho' %}</button>
     {% endif %}

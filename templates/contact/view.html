@@ -8,20 +8,20 @@
 {% block content %}   
 
     <div class='container bg-dark text-white'>
-        <div class='text-center pb-5 bg-dark'>
+        <div class='text-center pb-5 bg-dark text-alexandria'>
             <h1>{{ title }}</h1>
         </div>
         <div class="row pl-5">
             <div class="col-sm-6 col-md-8 col-12">
-                <h4>{% trans 'Chat instantâneo' %}</h4>
-                <p>{% trans 'Tire suas dúvidas com um de nossos atendentes em tempo real.' %}<br>
+                <h4 class="text-alexandria">{% trans 'Chat instantâneo' %}</h4>
+                <p class="text-alexandria-light">{% trans 'Tire suas dúvidas com um de nossos atendentes em tempo real.' %}<br>
                     {% trans 'Basta clicar em "Iniciar atendimento" que você será redirecionado para a pagina do chat' %}, 
                     {% trans 'depois basta colocar seu nome e o assunto, que um de nossos atendentes irá esclarecer suas dúvidas.' %} <br>
                 </p>
             </div>
         </div>
         <div class=" pl-5 pt-2 pb-4 ">
-            <button type="button" class="btn btn-warning"><a href="{% url 'chat_home' %} ">{% trans 'Iniciar atendimento' %}</a></button>
+            <button type="button" class="btn btn-warning text-alexandria"><a href="{% url 'chat_home' %} ">{% trans 'Iniciar atendimento' %}</a></button>
         </div> 
     </div>
 
@@ -31,7 +31,7 @@
     <section id="contact" class="section-padding bg-gray">
         <div class="container">
           <div class="section-header text-center">
-            <h2 class="section-title wow fadeInDown d-flex justify-content-start my-3" data-wow-delay="0.3s">{{ content }}</h2>
+            <h4 class="section-title wow fadeInDown d-flex justify-content-start my-3 text-alexandria" data-wow-delay="0.3s">{{ content }}</h4>
             <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
           </div>
           <div class="container">
@@ -45,7 +45,7 @@
               {% endif %}
           </div>
   
-          <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.3s">
+          <div class="row contact-form-area wow fadeInUp text-alexandria-light" data-wow-delay="0.3s">
             <div class="col-lg-7 col-md-12 col-sm-12">
               <div class="contact-block">
                 <form id="contato" method="post" action="{% url 'contact' %}">
@@ -75,7 +75,7 @@
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="submit-button text-left">
-                        <button type='submit' class='btn btn-warning mt-3 px-5 w-100'>{% trans 'Enviar' %}</button>
+                        <button type='submit' class='btn btn-warning mt-3 px-5 w-100 text-alexandria'>{% trans 'Enviar' %}</button>
                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                         <div class="clearfix"></div>
                       </div>

@@ -7,10 +7,10 @@
         </a>
     {% endif %}
     <div class="card-body">
-        <h5 class="card-title">{{ instance.title }}</h5>
-        <p class="card-text">{{ instance.description|truncatewords:14 }}</p>
-        <p class="card-text">{% trans 'R$' %} {{ instance.price }}</p>
-        <a href="{{ instance.get_absolute_url }}" class="btn btn-primary">{% trans 'Detalhes' %}</a>
+        <h5 class="card-title text-alexandria">{{ instance.title }}</h5>
+        <p class="card-text text-alexandria-light">{{ instance.description|truncatewords:14 }}</p>
+        <p class="card-text text-alexandria">{% trans 'R$' %} {{ instance.price }}</p>
+        <a href="{{ instance.get_absolute_url }}" class="btn btn-primary text-alexandria-light" style="text-transform: capitalize;">{% trans 'Detalhes' %}</a>
         {% include 'products/snippets/update-cart.html' with product=instance cart=cart %}
     </div>
 </div>

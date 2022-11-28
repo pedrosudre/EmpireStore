@@ -4,14 +4,14 @@
 <div class="row" style="margin-top: 10%">
     <div class="container d-flex justify-content-center text-light" >
         <div class="col">
-            <form class="p-4 border border border-warning rounded col-md-10 col-lg-5 mx-auto d-flex flex-column mt-4 w-70 " method='POST'>
-                <h2 class="d-flex justify-content-center mb-4 text-white">Login</h2>
+            <form class="p-4 border border border-warning rounded col-md-10 col-lg-5 mx-auto d-flex flex-column mt-4 w-70 text-alexandria" method='POST'>
+                <h2 class="d-flex justify-content-center mb-4 text-white ">Login</h2>
                 {% csrf_token %}
                 {{ form }}
-                <button type='submit' class='btn btn-warning mt-4 w-100'>{% trans 'Entrar' %}</button>
+                <button type='submit' class='btn btn-warning mt-4 w-100 text-alexandria'>{% trans 'Entrar' %}</button>
             </form>
-            <div class="text-white text-center pt-4">
-                {% trans 'Novo na Empire Store?' %} <a href="{% url 'register' %}" class="text-warning">{% trans 'CADASTRE-SE' %}</a> 
+            <div class="text-white text-center pt-4 text-alexandria-light">
+                {% trans 'Novo na Empire Store?' %} <a href="{% url 'register' %}" class="text-warning text-alexandria">{% trans 'CADASTRE-SE' %}</a> 
             </div>
         </div>
     </div>

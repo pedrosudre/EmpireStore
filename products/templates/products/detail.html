@@ -3,27 +3,27 @@
 {% block content %}
 <div class="container text-white">
   <div class='row'>
-    <div class='col-12 col-md-6'>
+    <div class='col-12 col-md-6 text-alexandria'>
       <h1>{{ object.title }}</h1> <br>
       {% if object.image %}
         <img src='{{ object.image.url }}' class='img-fluid p-1 border border-3 rounded border-warning'/>
       {% endif %}
     </div>  
-    <div class='col-12 col-md-6'>
+    <div class='col-12 col-md-6 text-alexandria'>
       {% include 'products/snippets/update-cart.html' with product=object cart=cart %} <br> <br>
 
         <h4>{% trans 'R$' %} {{ object.price }}</h4> <br>
 
     </div>
   <div class="row">
-    <div class="col-12"> <br> <br>
-      <h3>{% trans 'DESCRIÇÃO DO PRODUTO' %}</h3>
+    <div class="col-12 text-alexandria-light"> <br> <br>
+      <h3 class="text-alexandria">{% trans 'DESCRIÇÃO DO PRODUTO' %}</h3>
       {{ object.description|linebreaks }} <br/>
     </div>
   </div>
   <div class="row">
-    <div class="col-12">
-      <h3>{% trans 'INFORMAÇÕES TÉCNICAS' %}</h3>
+    <div class="col-12 text-alexandria-light">
+      <h3 class="text-alexandria">{% trans 'INFORMAÇÕES TÉCNICAS' %}</h3>
       {{ object.technicalInformation|linebreaks }} <br/>
     </div>
   </div>

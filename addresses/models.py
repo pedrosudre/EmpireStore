@@ -12,10 +12,10 @@ class Address(models.Model):
     address_type    = models.CharField(max_length = 120, choices = OPCOES)
     address_line_1  = models.CharField(_("Endereço 1"), max_length = 120)
     address_line_2  = models.CharField(_("Endereço 2"), max_length = 120, null = True, blank = True)
-    city            = models.CharField(_("Cidade"), max_length = 120)
-    country         = models.CharField(_("País"), max_length = 120, default = 'Brasil')
-    state           = models.CharField(_("Estado"), max_length = 120)
-    postal_code     = models.CharField(_("CEP"), max_length = 120)
+    city = models.CharField(_("Cidade"), max_length = 120)
+    country = models.CharField(_("País"), max_length = 120, default = 'Brasil')
+    state = models.CharField(_("Estado"), max_length = 120)
+    postal_code = models.CharField(_("CEP"), max_length = 120)
 
     def __str__(self):
         return str(self.billing_profile)

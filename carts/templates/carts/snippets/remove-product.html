@@ -3,7 +3,7 @@
   data-endpoint='{% url "cart:update" %}' 
   class="form"> {% csrf_token %}
   <input class="cart-item-product-id" type='hidden' name='product_id' value='{{ product.id }}' />
-  <button type='submit' class='btn btn-link btn-sm' style="padding:0px;cursor: pointer;">
+  <button type='submit' class='btn btn-link btn-sm text-alexandria' style="padding:0px;cursor: pointer;">
     {% trans 'Remover' %}
    </button>
 </form>
