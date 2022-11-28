@@ -13,16 +13,16 @@
 {% block content %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3 mt-2">
   <div class='container'>
-    <a class="navbar-brand text-primary mr-5" href="{{ home_url }}">
+    <a class="navbar-brand text-empire mr-5" href="{{ home_url }}" style="font-size: 1.8rem; line-height: 90%;">
       Empire
-      <div class="opa ml-1">Store</div> 
+      <div class="store ml-1 my-auto">Store</div> 
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse ml-5" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto" style="font-size: 1.2rem">
         <li class="nav-item {% if request.path == home_url %} active {% endif %}">
           <a class="nav-link" href="{{ home_url }}">{% trans 'Inicio' %} <span class="sr-only">(current)</span></a>
         </li>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load i18n %}
-
-
+{% load static %}
+{% url 'home' as home_url %}
 {% block content %}
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 
@@ -115,8 +115,6 @@ setInterval(function(){
     document.getElementById('message').value = ''
   });
 </script>
-
-</div>
 
 
 {% endblock %}

@@ -29,13 +29,14 @@
    </div>
   {% else %}
   {% if not object.shipping_address %}
-<div class="container text-white col-8 d-flex flex-column">
+<div class="container d-flex justify-content-start text-white">
+  
     <div class='row'> 
         <div class='col-12 '>
           <p class='lead'>{% trans 'Endereço de envio' %}</p>
           <hr/>
         </div>
-        <div class='col-6 '>
+        <div class='col-4 d-flex flex-column'>
           {% url "checkout_address_create" as checkout_address_create %}
           {% include 'addresses/form.html' with form=address_form next_url=request.build_absolute_uri action_url=checkout_address_create address_type='shipping' %}
         </div>
@@ -51,7 +52,7 @@
           <p class='lead'>{% trans 'Endereço de Cobrança' %}</p>
           <hr/>
         </div>
-        <div class='col-6'> 
+        <div class='col-4 d-flex flex-column'> 
           {% url "checkout_address_create" as checkout_address_create %}
           {% include 'addresses/form.html' with form=address_form next_url=request.build_absolute_uri action_url=checkout_address_create address_type='billing' %}
         </div>

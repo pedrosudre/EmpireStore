@@ -3,8 +3,8 @@
 {% block content %}
     <div class='row mb-3'>
     {% if query %}
-    <div class='col 12'>
-        {% trans 'Resultado para' %} <b>{{ query }}</b>
+    <div class='col 12 text-white'>
+        {% trans 'Resultado para' %} <b class="text-warning">{{ query }}</b>
         <hr />
     </div>
     {% else %}
