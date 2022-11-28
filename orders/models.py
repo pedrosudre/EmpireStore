@@ -49,6 +49,10 @@ class Order(models.Model):
     def __str__(self):
         return self.order_id
 
+    class Meta:
+        verbose_name = 'Pedido'
+        verbose_name_plural = 'Pedidos'
+
     objects = OrderManager()
 
     def update_total(self):

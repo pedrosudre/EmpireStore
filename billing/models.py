@@ -31,10 +31,15 @@ class BillingProfile(models.Model):
     email = models.EmailField()
     active = models.BooleanField(default = True)
     update = models.DateTimeField(auto_now = True)
-    # customer_id no Stripe ou Braintree ou ...
+
     objects = BillingProfileManager()
+
     def __str__(self):
         return self.email
+
+    class Meta:
+        verbose_name = 'Perfil de cobrança'
+        verbose_name_plural = 'Perfis de cobrança'
 
 def user_created_receiver(sender, instance, created, *args, **kwargs):
     if created and instance.email:

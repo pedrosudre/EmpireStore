@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #our apps
-    'bootstrap4',
     'dashboard',
     'chartjs',
     'aplic',
