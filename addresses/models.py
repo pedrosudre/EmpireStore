@@ -29,3 +29,6 @@ class Address(models.Model):
                 postal= self.postal_code,
                 country = self.country
             )
+    class Meta:
+        verbose_name = 'Endereço'
+        verbose_name_plural = 'Endereços'

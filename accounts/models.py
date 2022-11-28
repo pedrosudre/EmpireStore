@@ -8,3 +8,7 @@ class GuestEmail(models.Model):
 
     def __str__(self):
         return self.email
+
+    class Meta:
+        verbose_name = 'e-mail de convidado'
+        verbose_name_plural = 'e-mails de convidados'

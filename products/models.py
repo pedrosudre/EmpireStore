@@ -62,7 +62,9 @@ class Product(models.Model): #product_category
     featured = models.BooleanField('Destaque', default = False)
     active = models.BooleanField('Ativo', default = True)
 
-
+    class Meta:
+        verbose_name = 'Produto'
+        verbose_name_plural = 'Produtos'
 
     objects = ProductManager()
 

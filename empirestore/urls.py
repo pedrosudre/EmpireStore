@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.contrib.auth.views import LogoutView 
 from django.urls import path, include
 from django.views.generic import TemplateView
-from carts.views import cart_home, cart_detail_api_view
+from carts.views import cart_detail_api_view
 from accounts.views import login_page, register_page, logout_page, guest_register_view
 from addresses.views import checkout_address_create_view, checkout_address_reuse_view
 from dashboard.views import retorna_total_vendido, relatorio_faturamento, dashboard
