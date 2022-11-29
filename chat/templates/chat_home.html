@@ -4,9 +4,17 @@
 
 {% block content %}
 {% if user.is_superuser %}
-<div class="container text-warning">
-{{ rooms }}
-</div>
+<p>
+    
+    <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Salas Disponiveis 
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      {{ rooms }}
+    </div>
+  </div>
 {% endif %}
 </div>
 <div class="container text-white w-50 border border-warning" style="margin-top: 10%"> 

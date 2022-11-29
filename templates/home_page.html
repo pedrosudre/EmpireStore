@@ -3,9 +3,24 @@
 {% load static %}
     
 {% block content %}
+
+<div class="container my-4">
+	<p>
+		<button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+		  Novo na Empire Store?
+		</button>
+	  </p>
+	  <div style="min-height: 120px;">
+		<div class="collapse collapse-horizontal" id="collapseWidthExample">
+		  <div class="card card-body" style="width: 300px;">
+			Na Empire Store você pode navegar pela área de produtos, podendo filtrar pelo nome e marca. Você poderá finalizar sua compra como um convidade, iformando apenas seu email. Você poderá realizar contato com o suporte do site, colocando seu nome e o assundo no qual você esta precisando de ajuda.
+		  </div>
+		</div>
+	  </div>
+</div>
 <div class="container">
-    
-    
+	
+	
 	<div id="carouselExampleControls" class="carousel slide border border-warning " data-interval="5000" data-ride="carousel" >
 		<div class="carousel-inner">
 		  <div class="carousel-item active">
@@ -31,5 +46,10 @@
 		
 	  </div>
 
+	
+
 </div>
+
+
+
 {% endblock %}

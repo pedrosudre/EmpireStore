@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.db.models import Sum
 import datetime
 type(datetime)
+from carts.models import Cart
 
 
 def dashboard(request):
@@ -37,3 +38,20 @@ def relatorio_faturamento(request):
      
     return JsonResponse(data_json)
 
+def relatorio_produtos(request):
+    produtos = Cart.objects.all()
+    label = []
+    data = []
+    for produto in produtos:
+        vendas = Vendas.objects.filter(nome_produto=produto).aggregate(Sum('total'))
+        if not vendas['total__sum']:
+            vendas['total__sum'] = 0
+        label.append(produto.nome)
+        data.append(vendas['total__sum'])
+
+    x = list(zip(label, data))
+
+    x.sort(key=lambda x: x[1], reverse=True)
+    x = list(zip(*x))
+    
+    return JsonResponse({'labels': x[0][:3], 'data': x[1][:3]})

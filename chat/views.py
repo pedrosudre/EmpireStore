@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 # Create your views here.
 def home(request):
     context = {
-        'rooms': Room.objects.all(),
+        'rooms': Room.objects.all()
     } 
     
     return render(request, 'chat_home.html', context)
