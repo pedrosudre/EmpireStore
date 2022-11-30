@@ -3,22 +3,38 @@
 {% load static %}
 
 {% block content %}
+{% if user.is_superuser %}
+<p>
+
+    <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Salas Disponiveis 
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      {{ rooms }}
+    </div>
+  </div>
+{% endif %}
 
 <div class="container text-white w-50 border border-warning" style="margin-top: 10%"> 
     <div>
-        <h1 class="my-4 text-white text-center">Atendimento</h1>
+        <h1 class="my-4 text-white text-center text-alexandria">Atendimento</h1>
     </div>
-<form id="post-form" method="POST" action="checkview" class="d-flex flex-column ">
+<form id="post-form" method="POST" action="checkview" class="d-flex flex-column text-alexandria-light">
         {% csrf_token %}
         <label>{% trans 'Nome da Sala' %}</label>
         <input type="text" name="room_name" id="room_name" width="100px" />
         <label class="mt-3">{% trans 'Seu Nome' %}</label>
         <input type="text" name="username" id="username" width="100px" />
-        <input type="submit" class="btn btn-warning my-4" value="Entrar na Sala">
+        <input type="submit" class="btn btn-warning my-4 text-alexandria" value="Entrar na Sala">
     </form>
 </div>
 
-
-
+<script>
+    $(document).ready(function () {
+            $('.toast').toast('show');
+    });
+</script>
 
 {% endblock %}

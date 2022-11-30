@@ -1,10 +1,17 @@
 {% extends "base.html" %}
+{% load static %}
 {% load i18n %}
 {% block content %}
 <div class="container text-white">
   <div class='col-12 mx-auto py-5 text-center'>
-    <h2 class='display-1'> {% trans 'Pedido realizado com sucesso.' %} </h2>
-    <h4>{% trans 'Obrigado por escolher a Empire Store!' %} </h4>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel "data-interval="7000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'image/pedido.gif' %}" class="d-block w-100" alt="...">
+        </div>
+        
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
